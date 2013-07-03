@@ -1,0 +1,35 @@
+{
+    "name": "splot/command-project",
+    "description": "Command application project skeleton for Splot Framework.",
+    "keywords": ["splot", "application", "skeleton", "command", "console", "cli"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Michał Dudek",
+            "email": "michal@michaldudek.pl"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "http://packagist.org/"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.9",
+        "splot/framework": "dev-master",
+        "splot/devtools-module": "dev-master"
+    },
+    "minimum-stability": "dev",
+    "scripts": {
+        "post-install-cmd": [
+            "Splot\\DevToolsModule\\Composer\\ScriptHandler::clearCache"
+        ],
+        "post-update-cmd": [
+            "Splot\\DevToolsModule\\Composer\\ScriptHandler::clearCache"
+        ]
+    },
+    "extra": {
+        "splot-console": "app"
+    }
+}
